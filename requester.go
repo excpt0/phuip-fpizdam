@@ -33,7 +33,7 @@ func NewRequester(resource, cookie string, delay time.Duration) (*Requester, err
 				Proxy:              http.ProxyFromEnvironment,
 				TLSClientConfig:    &tls.Config{InsecureSkipVerify: true},
 			},
-			Timeout:       30 * time.Second,
+			Timeout:       120 * time.Second,
 			CheckRedirect: disableRedirects, // No redirects
 		},
 		u:      u,
